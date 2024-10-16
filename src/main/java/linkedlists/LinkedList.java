@@ -8,21 +8,10 @@ public class LinkedList {
         int value;
         ListNode next;
 
-        ListNode(int val){
+        ListNode(int val) {
             this.value = val;
             next = null;
         }
-    }
-
-    public void reverseLinkedList(ListNode listNode, ListNode old_head){
-        if(listNode.next==null){
-            this.head = listNode;
-            return;
-        }
-        reverseLinkedList(listNode.next,old_head);
-        listNode.next.next = listNode;
-        if(listNode.equals(old_head))
-            listNode.next = null;
     }
 
     public void printList(ListNode listNode){
@@ -46,12 +35,6 @@ public class LinkedList {
         three.next = four;
         four.next = five;
     }
-
-    public static void main(String[] args){
-        LinkedList linkedList = new LinkedList();
-        linkedList.populateLinkedList(linkedList);
-    }
-
 
 
 }
